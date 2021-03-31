@@ -4,3 +4,4 @@
   - file: gang_of_four/behavior/index
     sections:
     - file: gang_of_four/behavior/chain_of_responsability
+    - file: gang_of_four/behavior/command
