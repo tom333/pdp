@@ -1,0 +1,6 @@
+- file: intro
+- file: gang_of_four/index
+  sections:
+  - file: gang_of_four/behavior/index
+    sections:
+    - file: gang_of_four/behavior/chain_of_responsability
