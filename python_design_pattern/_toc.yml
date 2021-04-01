@@ -1,13 +1,12 @@
 - file: intro
-- file: gang_of_four/index
-  sections:
-  - file: gang_of_four/behavior/index
-    sections:
-    - file: gang_of_four/behavior/chain_of_responsability
-    - file: gang_of_four/behavior/command
-    - file: gang_of_four/behavior/mediator
-    - file: gang_of_four/behavior/observer
-    - file: gang_of_four/behavior/strategy
-    - file: gang_of_four/behavior/visitor
-    - file: gang_of_four/behavior/template_method
-    - file: gang_of_four/behavior/state
+
+- part: Gang of four
+  chapters:
+  - file: gang_of_four/behavior/chain_of_responsability
+  - file: gang_of_four/behavior/command
+  - file: gang_of_four/behavior/mediator
+  - file: gang_of_four/behavior/observer
+  - file: gang_of_four/behavior/strategy
+  - file: gang_of_four/behavior/visitor
+  - file: gang_of_four/behavior/template_method
+  - file: gang_of_four/behavior/state
