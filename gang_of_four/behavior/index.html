@@ -5,56 +5,57 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Récapitulatif de design pattern en python &#8212; Python Design Pattern</title>
+    <title>Patrons de type comportement &#8212; Python Design Pattern</title>
     
-  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
   <link rel="stylesheet"
-    href="_static/vendor/open-sans_all/1.44.1/index.css">
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
   <link rel="stylesheet"
-    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Patrons de type comportement" href="gang_of_four/behavior/index.html" />
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Chaine de responsabilité" href="chain_of_responsability.html" />
+    <link rel="prev" title="Récapitulatif de design pattern en python" href="../../intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -71,22 +72,22 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
+<a class="navbar-brand text-wrap" href="../../index.html">
   
-  <img src="_static/logo.png" class="logo" alt="logo">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">Python Design Pattern</h1>
   
 </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
    Récapitulatif de design pattern en python
   </a>
  </li>
@@ -96,49 +97,49 @@
   Gang of four
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="gang_of_four/behavior/index.html">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="current reference internal" href="#">
    Patrons de type comportement
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="gang_of_four/behavior/chain_of_responsability.html">
+    <a class="reference internal" href="chain_of_responsability.html">
      Chaine de responsabilité
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gang_of_four/behavior/command.html">
+    <a class="reference internal" href="command.html">
      Commande
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gang_of_four/behavior/mediator.html">
+    <a class="reference internal" href="mediator.html">
      Médiateur
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gang_of_four/behavior/observer.html">
+    <a class="reference internal" href="observer.html">
      Observateur
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gang_of_four/behavior/strategy.html">
+    <a class="reference internal" href="strategy.html">
      Stratégie
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gang_of_four/behavior/visitor.html">
+    <a class="reference internal" href="visitor.html">
      Visiteur
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gang_of_four/behavior/template_method.html">
+    <a class="reference internal" href="template_method.html">
      Patron de méthode
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gang_of_four/behavior/state.html">
+    <a class="reference internal" href="state.html">
      Etat
     </a>
    </li>
@@ -147,12 +148,12 @@
   </i>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="gang_of_four/creation/index.html">
+  <a class="reference internal" href="../creation/index.html">
    Patrons de type création
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="gang_of_four/structure/index.html">
+  <a class="reference internal" href="../structure/index.html">
    Patrons de type structure
   </a>
  </li>
@@ -196,7 +197,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/gang_of_four/behavior/index.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -216,10 +217,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/tom333/pdp/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/tom333/pdp/issues/new?title=Issue%20on%20page%20%2Fgang_of_four/behavior/index.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/tom333/pdp/edit/main/intro.md"><button
+        <a class="edit-button" href="https://github.com/tom333/pdp/edit/main/gang_of_four/behavior/index.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -247,9 +248,8 @@
         
               <div>
                 
-  <div class="section" id="recapitulatif-de-design-pattern-en-python">
-<h1>Récapitulatif de design pattern en python<a class="headerlink" href="#recapitulatif-de-design-pattern-en-python" title="Permalink to this headline">¶</a></h1>
-<p>parce qu’un peu de révision ne fait jamais de mal</p>
+  <div class="section" id="patrons-de-type-comportement">
+<h1>Patrons de type comportement<a class="headerlink" href="#patrons-de-type-comportement" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -267,7 +267,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./."
+            path: "./gang_of_four/behavior"
         },
         predefinedOutput: true
     }
@@ -279,7 +279,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='right-next' id="next-link" href="gang_of_four/behavior/index.html" title="next page">Patrons de type comportement</a>
+    <a class='left-prev' id="prev-link" href="../../intro.html" title="previous page">Récapitulatif de design pattern en python</a>
+    <a class='right-next' id="next-link" href="chain_of_responsability.html" title="next page">Chaine de responsabilité</a>
 
         </div>
         
@@ -302,7 +303,7 @@
     </div>
 
     
-  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

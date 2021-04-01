@@ -98,44 +98,63 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="index.html">
+   Patrons de type comportement
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="chain_of_responsability.html">
+     Chaine de responsabilité
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Commande
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mediator.html">
+     Médiateur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="observer.html">
+     Observateur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="strategy.html">
+     Stratégie
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="visitor.html">
+     Visiteur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="template_method.html">
+     Patron de méthode
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="state.html">
+     Etat
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chain_of_responsability.html">
-   Chaine de responsabilité
+  <a class="reference internal" href="../creation/index.html">
+   Patrons de type création
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Commande
-  </a>
- </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="mediator.html">
-   Médiateur
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="observer.html">
-   Observateur
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strategy.html">
-   Stratégie
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="visitor.html">
-   Visiteur
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="template_method.html">
-   Patron de méthode
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="state.html">
-   Etat
+  <a class="reference internal" href="../structure/index.html">
+   Patrons de type structure
   </a>
  </li>
 </ul>
@@ -283,34 +302,13 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ComplexCommand</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">receiver</span><span class="p">:</span> <span class="n">Receiver</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">receiver</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span> <span class="o">=</span> <span class="n">receiver</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_a</span> <span class="o">=</span> <span class="n">a</span>
         
     <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Complex command executed !&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="o">.</span><span class="n">deal_with</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_a</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">e9b8dfa9725c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">class</span> <span class="nc">ComplexCommand</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">receiver</span><span class="p">:</span> <span class="n">Receiver</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span> <span class="o">=</span> <span class="n">receiver</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_a</span> <span class="o">=</span> <span class="n">a</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="nn">&lt;ipython-input-4-e9b8dfa9725c&gt;</span> in <span class="ni">ComplexCommand</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">class</span> <span class="nc">ComplexCommand</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
-<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">receiver</span><span class="p">:</span> <span class="n">Receiver</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span> <span class="o">=</span> <span class="n">receiver</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_a</span> <span class="o">=</span> <span class="n">a</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="ne">NameError</span>: name &#39;Receiver&#39; is not defined
 </pre></div>
 </div>
 </div>
