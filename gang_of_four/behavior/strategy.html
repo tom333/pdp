@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design pattern de comportement &#8212; Python Design Pattern</title>
+    <title>&lt;no title&gt; &#8212; Python Design Pattern</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -54,8 +54,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Import nécessaires" href="chain_of_responsability.html" />
-    <link rel="prev" title="Design pattern du “gang of four”" href="../index.html" />
+    <link rel="next" title="&lt;no title&gt;" href="visitor.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="observer.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -92,14 +92,14 @@
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../index.html">
    Design pattern du “gang of four”
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2 current active collapsible-parent">
-    <a class="current reference internal" href="#">
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="index.html">
      Design pattern de comportement
     </a>
     <ul class="collapse-ul">
@@ -211,9 +211,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/gang_of_four/behavior/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/gang_of_four/behavior/strategy.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -231,10 +231,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/tom333/pdp/issues/new?title=Issue%20on%20page%20%2Fgang_of_four/behavior/index.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/tom333/pdp/issues/new?title=Issue%20on%20page%20%2Fgang_of_four/behavior/strategy.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/tom333/pdp/edit/main/gang_of_four/behavior/index.md"><button
+        <a class="edit-button" href="https://github.com/tom333/pdp/edit/main/gang_of_four/behavior/strategy.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -249,11 +249,38 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tom333/pdp/main?urlpath=tree/gang_of_four/behavior/strategy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="simple nav section-nav flex-column">
+</ul>
+
+        </nav>
+        
         </div>
     </div>
 </div>
@@ -262,9 +289,89 @@
         
               <div>
                 
-  <div class="section" id="design-pattern-de-comportement">
-<h1>Design pattern de comportement<a class="headerlink" href="#design-pattern-de-comportement" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Strategy</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">do_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">List</span><span class="p">):</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Context</span><span class="p">():</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strategy</span><span class="p">:</span> <span class="n">Strategy</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_strategy</span> <span class="o">=</span> <span class="n">strategy</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">strategy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Strategy</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_strategy</span>
+
+    <span class="nd">@strategy</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">strategy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strategy</span><span class="p">:</span> <span class="n">Strategy</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_strategy</span> <span class="o">=</span> <span class="n">strategy</span>
+
+    <span class="k">def</span> <span class="nf">do_some_business_logic</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Context: Sorting data using the strategy (not sure how it&#39;ll do it)&quot;</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_strategy</span><span class="o">.</span><span class="n">do_algorithm</span><span class="p">([</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ConcreteStrategyA</span><span class="p">(</span><span class="n">Strategy</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">do_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">List</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">ConcreteStrategyB</span><span class="p">(</span><span class="n">Strategy</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">do_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">List</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">context</span> <span class="o">=</span> <span class="n">Context</span><span class="p">(</span><span class="n">ConcreteStrategyA</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Client: Strategy is set to normal sorting.&quot;</span><span class="p">)</span>
+<span class="n">context</span><span class="o">.</span><span class="n">do_some_business_logic</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Client: Strategy is set to reverse sorting.&quot;</span><span class="p">)</span>
+<span class="n">context</span><span class="o">.</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">ConcreteStrategyB</span><span class="p">()</span>
+<span class="n">context</span><span class="o">.</span><span class="n">do_some_business_logic</span><span class="p">()</span>
+
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Client: Strategy is set to normal sorting.
+Context: Sorting data using the strategy (not sure how it&#39;ll do it)
+a,b,c,d,e
+
+Client: Strategy is set to reverse sorting.
+Context: Sorting data using the strategy (not sure how it&#39;ll do it)
+e,d,c,b,a
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -293,8 +400,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">Design pattern du “gang of four”</a>
-    <a class='right-next' id="next-link" href="chain_of_responsability.html" title="next page">Import nécessaires</a>
+    <a class='left-prev' id="prev-link" href="observer.html" title="previous page">&lt;no title&gt;</a>
+    <a class='right-next' id="next-link" href="visitor.html" title="next page">&lt;no title&gt;</a>
 
         </div>
         

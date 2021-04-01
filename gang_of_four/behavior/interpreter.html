@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design pattern de comportement &#8212; Python Design Pattern</title>
+    <title>Classe abstraite &#8212; Python Design Pattern</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -54,8 +54,6 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Import nécessaires" href="chain_of_responsability.html" />
-    <link rel="prev" title="Design pattern du “gang of four”" href="../index.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -92,14 +90,14 @@
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../index.html">
    Design pattern du “gang of four”
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2 current active collapsible-parent">
-    <a class="current reference internal" href="#">
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="index.html">
      Design pattern de comportement
     </a>
     <ul class="collapse-ul">
@@ -211,9 +209,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/gang_of_four/behavior/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/gang_of_four/behavior/interpreter.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -231,10 +229,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/tom333/pdp/issues/new?title=Issue%20on%20page%20%2Fgang_of_four/behavior/index.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/tom333/pdp/issues/new?title=Issue%20on%20page%20%2Fgang_of_four/behavior/interpreter.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/tom333/pdp/edit/main/gang_of_four/behavior/index.md"><button
+        <a class="edit-button" href="https://github.com/tom333/pdp/edit/main/gang_of_four/behavior/interpreter.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -249,6 +247,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tom333/pdp/main?urlpath=tree/gang_of_four/behavior/interpreter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -262,9 +277,53 @@
         
               <div>
                 
-  <div class="section" id="design-pattern-de-comportement">
-<h1>Design pattern de comportement<a class="headerlink" href="#design-pattern-de-comportement" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="classe-abstraite">
+<h1>Classe abstraite<a class="headerlink" href="#classe-abstraite" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Expression</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">interpret</span><span class="p">(</span><span class="n">stack</span><span class="p">:</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="p">[]:</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TerminalExpressionNumber</span><span class="p">(</span><span class="n">Expression</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_number</span> <span class="o">=</span> <span class="n">number</span>
+        
+    <span class="k">def</span> <span class="nf">interpret</span><span class="p">(</span><span class="n">stack</span><span class="p">:[])</span> <span class="o">-&gt;</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="n">stack</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_number</span><span class="p">)</span>        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TerminalExpressinPlus</span><span class="p">(</span><span class="n">Expression</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">interpret</span><span class="p">(</span><span class="n">stack</span><span class="p">:</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="p">[]</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-4-778d40c61ff9&gt;&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+    <span class="k">def</span> <span class="nf">interpret</span><span class="p">(</span><span class="n">stack</span><span class="p">:</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="p">[]</span>
+                                  <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -293,8 +352,6 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">Design pattern du “gang of four”</a>
-    <a class='right-next' id="next-link" href="chain_of_responsability.html" title="next page">Import nécessaires</a>
 
         </div>
         

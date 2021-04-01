@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Import nécessaires &#8212; Python Design Pattern</title>
+    <title>&lt;no title&gt; &#8212; Python Design Pattern</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -54,8 +54,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Classe abstraite" href="command.html" />
-    <link rel="prev" title="Design pattern de comportement" href="index.html" />
+    <link rel="next" title="&lt;no title&gt;" href="state.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="visitor.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -92,39 +92,39 @@
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../index.html">
    Design pattern du “gang of four”
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2 current active collapsible-parent">
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="index.html">
      Design pattern de comportement
     </a>
-    <ul class="current collapse-ul">
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="chain_of_responsability.html">
        Import nécessaires
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="#declaration-de-la-classe-abstraite">
+      <a class="reference internal" href="chain_of_responsability.html#declaration-de-la-classe-abstraite">
        Déclaration de la classe abstraite
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="#classe-mere-declarant-l-enchainement">
+      <a class="reference internal" href="chain_of_responsability.html#classe-mere-declarant-l-enchainement">
        Classe mère déclarant l’enchainement
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="#declaration-des-classes-concretes">
+      <a class="reference internal" href="chain_of_responsability.html#declaration-des-classes-concretes">
        Déclaration des classes concrètes
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="#exemple-d-implementation-et-d-utilisation">
+      <a class="reference internal" href="chain_of_responsability.html#exemple-d-implementation-et-d-utilisation">
        Exemple d’implémentation et d’utilisation
       </a>
      </li>
@@ -211,7 +211,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/gang_of_four/behavior/chain_of_responsability.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/gang_of_four/behavior/template_method.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -231,10 +231,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/tom333/pdp/issues/new?title=Issue%20on%20page%20%2Fgang_of_four/behavior/chain_of_responsability.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/tom333/pdp/issues/new?title=Issue%20on%20page%20%2Fgang_of_four/behavior/template_method.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/tom333/pdp/edit/main/gang_of_four/behavior/chain_of_responsability.ipynb"><button
+        <a class="edit-button" href="https://github.com/tom333/pdp/edit/main/gang_of_four/behavior/template_method.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -254,7 +254,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tom333/pdp/main?urlpath=tree/gang_of_four/behavior/chain_of_responsability.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tom333/pdp/main?urlpath=tree/gang_of_four/behavior/template_method.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -276,32 +276,7 @@
             Contents
         </div>
         <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Import nécessaires
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#declaration-de-la-classe-abstraite">
-   Déclaration de la classe abstraite
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#classe-mere-declarant-l-enchainement">
-   Classe mère déclarant l’enchainement
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#declaration-des-classes-concretes">
-   Déclaration des classes concrètes
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exemple-d-implementation-et-d-utilisation">
-   Exemple d’implémentation et d’utilisation
-  </a>
- </li>
+            <ul class="simple nav section-nav flex-column">
 </ul>
 
         </nav>
@@ -314,112 +289,117 @@
         
               <div>
                 
-  <div class="section" id="import-necessaires">
-<h1>Import nécessaires<a class="headerlink" href="#import-necessaires" title="Permalink to this headline">¶</a></h1>
-<div class="cell docutils container">
+  <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="declaration-de-la-classe-abstraite">
-<h1>Déclaration de la classe abstraite<a class="headerlink" href="#declaration-de-la-classe-abstraite" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Handler</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">AbstractClass</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    
+    <span class="k">def</span> <span class="nf">template_method</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_operation1</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">required_operations1</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_operation2</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hook1</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">required_operations2</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_operation3</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hook2</span><span class="p">()</span>
+
+    <span class="c1"># These operations already have implementations.</span>
+
+    <span class="k">def</span> <span class="nf">base_operation1</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AbstractClass says: I am doing the bulk of the work&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">base_operation2</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AbstractClass says: But I let subclasses override some operations&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">base_operation3</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AbstractClass says: But I am doing the bulk of the work anyway&quot;</span><span class="p">)</span>
+
+    <span class="c1"># These operations have to be implemented in subclasses.</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">set_next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">handler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">required_operations1</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">pass</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="k">def</span> <span class="nf">required_operations2</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">hook1</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">hook2</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">pass</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="classe-mere-declarant-l-enchainement">
-<h1>Classe mère déclarant l’enchainement<a class="headerlink" href="#classe-mere-declarant-l-enchainement" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">AbstractHandler</span><span class="p">(</span><span class="n">Handler</span><span class="p">):</span>
-    <span class="n">_next_handler</span><span class="p">:</span> <span class="n">Handler</span> <span class="o">=</span> <span class="kc">None</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ConcreteClass1</span><span class="p">(</span><span class="n">AbstractClass</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">required_operations1</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ConcreteClass1 says: Implemented Operation1&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">set_next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">handler</span><span class="p">:</span> <span class="n">Handler</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Handler</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_next_handler</span> <span class="o">=</span> <span class="n">handler</span>
-        <span class="c1"># Permet d&#39;enchainer les déclarations</span>
-        <span class="c1"># handler1.set_next(handler2).set_next(handler3)</span>
-        <span class="k">return</span> <span class="n">handler</span>
+    <span class="k">def</span> <span class="nf">required_operations2</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ConcreteClass1 says: Implemented Operation2&quot;</span><span class="p">)</span>
 
-    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_next_handler</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_next_handler</span><span class="o">.</span><span class="n">handle</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kc">None</span>
+
+<span class="k">class</span> <span class="nc">ConcreteClass2</span><span class="p">(</span><span class="n">AbstractClass</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">required_operations1</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ConcreteClass2 says: Implemented Operation1&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">required_operations2</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ConcreteClass2 says: Implemented Operation2&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">hook1</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ConcreteClass2 says: Overridden Hook1&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="declaration-des-classes-concretes">
-<h1>Déclaration des classes concrètes<a class="headerlink" href="#declaration-des-classes-concretes" title="Permalink to this headline">¶</a></h1>
-<p>3 handlers concrets avec chacun leur comportement spécifique</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Handler1</span><span class="p">(</span><span class="n">AbstractHandler</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">request</span> <span class="o">==</span> <span class="s2">&quot;Type1&quot;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> handled by Handler1&quot;</span> <span class="o">%</span> <span class="n">request</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">handle</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">client_code</span><span class="p">(</span><span class="n">abstract_class</span><span class="p">:</span> <span class="n">AbstractClass</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The client code calls the template method to execute the algorithm. Client</span>
+<span class="sd">    code does not have to know the concrete class of an object it works with, as</span>
+<span class="sd">    long as it works with objects through the interface of their base class.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
+    <span class="c1"># ...</span>
+    <span class="n">abstract_class</span><span class="o">.</span><span class="n">template_method</span><span class="p">()</span>
+    <span class="c1"># ...</span>
 
-<span class="k">class</span> <span class="nc">Handler2</span><span class="p">(</span><span class="n">AbstractHandler</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">request</span> <span class="o">==</span> <span class="s2">&quot;Type2&quot;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> handled by Handler2&quot;</span> <span class="o">%</span> <span class="n">request</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">handle</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Same client code can work with different subclasses:&quot;</span><span class="p">)</span>
+<span class="n">client_code</span><span class="p">(</span><span class="n">ConcreteClass1</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-
-<span class="k">class</span> <span class="nc">Handler3</span><span class="p">(</span><span class="n">AbstractHandler</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">request</span> <span class="o">==</span> <span class="s2">&quot;Type3&quot;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> handled by Handler3&quot;</span> <span class="o">%</span> <span class="n">request</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">handle</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="exemple-d-implementation-et-d-utilisation">
-<h1>Exemple d’implémentation et d’utilisation<a class="headerlink" href="#exemple-d-implementation-et-d-utilisation" title="Permalink to this headline">¶</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">handler1</span> <span class="o">=</span> <span class="n">Handler1</span><span class="p">()</span>
-<span class="n">handler2</span> <span class="o">=</span> <span class="n">Handler2</span><span class="p">()</span>
-<span class="n">handler3</span> <span class="o">=</span> <span class="n">Handler3</span><span class="p">()</span>
-
-<span class="n">handler1</span><span class="o">.</span><span class="n">set_next</span><span class="p">(</span><span class="n">handler2</span><span class="p">)</span><span class="o">.</span><span class="n">set_next</span><span class="p">(</span><span class="n">handler3</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">type_name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Type2&quot;</span><span class="p">,</span> <span class="s2">&quot;Type1&quot;</span><span class="p">,</span> <span class="s2">&quot;Type3&quot;</span><span class="p">]:</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="n">handler1</span><span class="o">.</span><span class="n">handle</span><span class="p">(</span><span class="n">type_name</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Same client code can work with different subclasses:&quot;</span><span class="p">)</span>
+<span class="n">client_code</span><span class="p">(</span><span class="n">ConcreteClass2</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Type2 handled by Handler2
-Type1 handled by Handler1
-Type3 handled by Handler3
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Same client code can work with different subclasses:
+AbstractClass says: I am doing the bulk of the work
+ConcreteClass1 says: Implemented Operation1
+AbstractClass says: But I let subclasses override some operations
+ConcreteClass1 says: Implemented Operation2
+AbstractClass says: But I am doing the bulk of the work anyway
+
+Same client code can work with different subclasses:
+AbstractClass says: I am doing the bulk of the work
+ConcreteClass2 says: Implemented Operation1
+AbstractClass says: But I let subclasses override some operations
+ConcreteClass2 says: Overridden Hook1
+ConcreteClass2 says: Implemented Operation2
+AbstractClass says: But I am doing the bulk of the work anyway
 </pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -449,8 +429,8 @@ Type3 handled by Handler3
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Design pattern de comportement</a>
-    <a class='right-next' id="next-link" href="command.html" title="next page">Classe abstraite</a>
+    <a class='left-prev' id="prev-link" href="visitor.html" title="previous page">&lt;no title&gt;</a>
+    <a class='right-next' id="next-link" href="state.html" title="next page">&lt;no title&gt;</a>
 
         </div>
         
