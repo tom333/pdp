@@ -6,3 +6,5 @@
     - file: gang_of_four/behavior/chain_of_responsability
     - file: gang_of_four/behavior/command
     - file: gang_of_four/behavior/mediator
+    - file: gang_of_four/behavior/observer
+    - file: gang_of_four/behavior/strategy
