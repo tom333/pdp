@@ -8,3 +8,4 @@
     - file: gang_of_four/behavior/mediator
     - file: gang_of_four/behavior/observer
     - file: gang_of_four/behavior/strategy
+    - file: gang_of_four/behavior/visitor
