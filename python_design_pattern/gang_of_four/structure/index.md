@@ -1,0 +1,2 @@
+Patrons de type structure
+==========================
