@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Classe abstraite &#8212; Python Design Pattern</title>
+    <title>Commande &#8212; Python Design Pattern</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -54,8 +54,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Classe abstraite" href="mediator.html" />
-    <link rel="prev" title="Import nécessaires" href="chain_of_responsability.html" />
+    <link rel="next" title="Médiateur" href="mediator.html" />
+    <link rel="prev" title="Chaine de responsabilité" href="chain_of_responsability.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -92,84 +92,51 @@
   </a>
  </li>
 </ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Gang of four
+ </span>
+</p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="../index.html">
-   Design pattern du “gang of four”
+ <li class="toctree-l1">
+  <a class="reference internal" href="chain_of_responsability.html">
+   Chaine de responsabilité
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2 current active collapsible-parent">
-    <a class="reference internal" href="index.html">
-     Design pattern de comportement
-    </a>
-    <ul class="current collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="chain_of_responsability.html">
-       Import nécessaires
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="chain_of_responsability.html#declaration-de-la-classe-abstraite">
-       Déclaration de la classe abstraite
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="chain_of_responsability.html#classe-mere-declarant-l-enchainement">
-       Classe mère déclarant l’enchainement
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="chain_of_responsability.html#declaration-des-classes-concretes">
-       Déclaration des classes concrètes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="chain_of_responsability.html#exemple-d-implementation-et-d-utilisation">
-       Exemple d’implémentation et d’utilisation
-      </a>
-     </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       Classe abstraite
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="#exemple-de-commande-simple">
-       Exemple de commande simple
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="#exemple-de-commande-plus-complexe">
-       Exemple de commande plus complexe
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="#classes-utiles-a-l-exemple">
-       Classes utiles à l’exemple
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="#exemple">
-       Exemple
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="mediator.html">
-       Classe abstraite
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="mediator.html#implementations">
-       Implémentations
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Commande
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mediator.html">
+   Médiateur
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="observer.html">
+   Observateur
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strategy.html">
+   Stratégie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="visitor.html">
+   Visiteur
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="template_method.html">
+   Patron de méthode
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="state.html">
+   Etat
+  </a>
  </li>
 </ul>
 
@@ -271,41 +238,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Classe abstraite
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exemple-de-commande-simple">
-   Exemple de commande simple
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exemple-de-commande-plus-complexe">
-   Exemple de commande plus complexe
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#classes-utiles-a-l-exemple">
-   Classes utiles à l’exemple
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exemple">
-   Exemple
-  </a>
- </li>
-</ul>
-
-        </nav>
-        
         </div>
     </div>
 </div>
@@ -314,15 +246,16 @@
         
               <div>
                 
-  <div class="cell docutils container">
+  <div class="section" id="commande">
+<h1>Commande<a class="headerlink" href="#commande" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="classe-abstraite">
-<h1>Classe abstraite<a class="headerlink" href="#classe-abstraite" title="Permalink to this headline">¶</a></h1>
+<p>Classe abstraite</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Command</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
@@ -333,9 +266,7 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exemple-de-commande-simple">
-<h1>Exemple de commande simple<a class="headerlink" href="#exemple-de-commande-simple" title="Permalink to this headline">¶</a></h1>
+<p>Exemple de commande simple</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SimpleCommand</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
@@ -348,9 +279,7 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exemple-de-commande-plus-complexe">
-<h1>Exemple de commande plus complexe<a class="headerlink" href="#exemple-de-commande-plus-complexe" title="Permalink to this headline">¶</a></h1>
+<p>Exemple de commande plus complexe</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ComplexCommand</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
@@ -386,9 +315,7 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="classes-utiles-a-l-exemple">
-<h1>Classes utiles à l’exemple<a class="headerlink" href="#classes-utiles-a-l-exemple" title="Permalink to this headline">¶</a></h1>
+<p>Classes utiles à l’exemple</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Receiver</span><span class="p">:</span>
@@ -431,9 +358,7 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exemple">
-<h1>Exemple<a class="headerlink" href="#exemple" title="Permalink to this headline">¶</a></h1>
+<p>Exemple</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
@@ -488,8 +413,8 @@ Receiver.deal_with(Send email)
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="chain_of_responsability.html" title="previous page">Import nécessaires</a>
-    <a class='right-next' id="next-link" href="mediator.html" title="next page">Classe abstraite</a>
+    <a class='left-prev' id="prev-link" href="chain_of_responsability.html" title="previous page">Chaine de responsabilité</a>
+    <a class='right-next' id="next-link" href="mediator.html" title="next page">Médiateur</a>
 
         </div>
         

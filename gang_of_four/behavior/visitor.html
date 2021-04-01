@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Python Design Pattern</title>
+    <title>Visiteur &#8212; Python Design Pattern</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -54,8 +54,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="template_method.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="strategy.html" />
+    <link rel="next" title="Patron de méthode" href="template_method.html" />
+    <link rel="prev" title="Stratégie" href="strategy.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -92,84 +92,51 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../index.html">
-   Design pattern du “gang of four”
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Gang of four
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chain_of_responsability.html">
+   Chaine de responsabilité
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="index.html">
-     Design pattern de comportement
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="chain_of_responsability.html">
-       Import nécessaires
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="chain_of_responsability.html#declaration-de-la-classe-abstraite">
-       Déclaration de la classe abstraite
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="chain_of_responsability.html#classe-mere-declarant-l-enchainement">
-       Classe mère déclarant l’enchainement
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="chain_of_responsability.html#declaration-des-classes-concretes">
-       Déclaration des classes concrètes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="chain_of_responsability.html#exemple-d-implementation-et-d-utilisation">
-       Exemple d’implémentation et d’utilisation
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="command.html">
-       Classe abstraite
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="command.html#exemple-de-commande-simple">
-       Exemple de commande simple
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="command.html#exemple-de-commande-plus-complexe">
-       Exemple de commande plus complexe
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="command.html#classes-utiles-a-l-exemple">
-       Classes utiles à l’exemple
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="command.html#exemple">
-       Exemple
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="mediator.html">
-       Classe abstraite
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="mediator.html#implementations">
-       Implémentations
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="command.html">
+   Commande
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mediator.html">
+   Médiateur
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="observer.html">
+   Observateur
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strategy.html">
+   Stratégie
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Visiteur
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="template_method.html">
+   Patron de méthode
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="state.html">
+   Etat
+  </a>
  </li>
 </ul>
 
@@ -271,16 +238,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="simple nav section-nav flex-column">
-</ul>
-
-        </nav>
-        
         </div>
     </div>
 </div>
@@ -289,7 +246,9 @@
         
               <div>
                 
-  <div class="cell docutils container">
+  <div class="section" id="visiteur">
+<h1>Visiteur<a class="headerlink" href="#visiteur" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
@@ -393,6 +352,7 @@ B + ConcreteVisitor2
 </div>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -419,8 +379,8 @@ B + ConcreteVisitor2
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="strategy.html" title="previous page">&lt;no title&gt;</a>
-    <a class='right-next' id="next-link" href="template_method.html" title="next page">&lt;no title&gt;</a>
+    <a class='left-prev' id="prev-link" href="strategy.html" title="previous page">Stratégie</a>
+    <a class='right-next' id="next-link" href="template_method.html" title="next page">Patron de méthode</a>
 
         </div>
         

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Import nécessaires &#8212; Python Design Pattern</title>
+    <title>Chaine de responsabilité &#8212; Python Design Pattern</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -54,8 +54,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Classe abstraite" href="command.html" />
-    <link rel="prev" title="Design pattern de comportement" href="index.html" />
+    <link rel="next" title="Commande" href="command.html" />
+    <link rel="prev" title="Récapitulatif de design pattern en python" href="../../intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -92,84 +92,51 @@
   </a>
  </li>
 </ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Gang of four
+ </span>
+</p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="../index.html">
-   Design pattern du “gang of four”
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Chaine de responsabilité
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2 current active collapsible-parent">
-    <a class="reference internal" href="index.html">
-     Design pattern de comportement
-    </a>
-    <ul class="current collapse-ul">
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       Import nécessaires
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="#declaration-de-la-classe-abstraite">
-       Déclaration de la classe abstraite
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="#classe-mere-declarant-l-enchainement">
-       Classe mère déclarant l’enchainement
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="#declaration-des-classes-concretes">
-       Déclaration des classes concrètes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="#exemple-d-implementation-et-d-utilisation">
-       Exemple d’implémentation et d’utilisation
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="command.html">
-       Classe abstraite
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="command.html#exemple-de-commande-simple">
-       Exemple de commande simple
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="command.html#exemple-de-commande-plus-complexe">
-       Exemple de commande plus complexe
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="command.html#classes-utiles-a-l-exemple">
-       Classes utiles à l’exemple
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="command.html#exemple">
-       Exemple
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="mediator.html">
-       Classe abstraite
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="mediator.html#implementations">
-       Implémentations
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="command.html">
+   Commande
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mediator.html">
+   Médiateur
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="observer.html">
+   Observateur
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strategy.html">
+   Stratégie
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="visitor.html">
+   Visiteur
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="template_method.html">
+   Patron de méthode
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="state.html">
+   Etat
+  </a>
  </li>
 </ul>
 
@@ -271,41 +238,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Import nécessaires
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#declaration-de-la-classe-abstraite">
-   Déclaration de la classe abstraite
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#classe-mere-declarant-l-enchainement">
-   Classe mère déclarant l’enchainement
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#declaration-des-classes-concretes">
-   Déclaration des classes concrètes
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exemple-d-implementation-et-d-utilisation">
-   Exemple d’implémentation et d’utilisation
-  </a>
- </li>
-</ul>
-
-        </nav>
-        
         </div>
     </div>
 </div>
@@ -314,8 +246,9 @@
         
               <div>
                 
-  <div class="section" id="import-necessaires">
-<h1>Import nécessaires<a class="headerlink" href="#import-necessaires" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="chaine-de-responsabilite">
+<h1>Chaine de responsabilité<a class="headerlink" href="#chaine-de-responsabilite" title="Permalink to this headline">¶</a></h1>
+<p>Import nécessaires</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
@@ -324,9 +257,7 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="declaration-de-la-classe-abstraite">
-<h1>Déclaration de la classe abstraite<a class="headerlink" href="#declaration-de-la-classe-abstraite" title="Permalink to this headline">¶</a></h1>
+<p>Déclaration de la classe abstraite</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Handler</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
@@ -342,9 +273,7 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="classe-mere-declarant-l-enchainement">
-<h1>Classe mère déclarant l’enchainement<a class="headerlink" href="#classe-mere-declarant-l-enchainement" title="Permalink to this headline">¶</a></h1>
+<p>Classe mère déclarant l’enchainement</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">AbstractHandler</span><span class="p">(</span><span class="n">Handler</span><span class="p">):</span>
@@ -365,9 +294,7 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="declaration-des-classes-concretes">
-<h1>Déclaration des classes concrètes<a class="headerlink" href="#declaration-des-classes-concretes" title="Permalink to this headline">¶</a></h1>
+<p>Déclaration des classes concrètes</p>
 <p>3 handlers concrets avec chacun leur comportement spécifique</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -397,9 +324,7 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exemple-d-implementation-et-d-utilisation">
-<h1>Exemple d’implémentation et d’utilisation<a class="headerlink" href="#exemple-d-implementation-et-d-utilisation" title="Permalink to this headline">¶</a></h1>
+<p>Exemple d’implémentation et d’utilisation</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">handler1</span> <span class="o">=</span> <span class="n">Handler1</span><span class="p">()</span>
@@ -449,8 +374,8 @@ Type3 handled by Handler3
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Design pattern de comportement</a>
-    <a class='right-next' id="next-link" href="command.html" title="next page">Classe abstraite</a>
+    <a class='left-prev' id="prev-link" href="../../intro.html" title="previous page">Récapitulatif de design pattern en python</a>
+    <a class='right-next' id="next-link" href="command.html" title="next page">Commande</a>
 
         </div>
         
